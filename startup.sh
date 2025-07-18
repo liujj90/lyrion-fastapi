@@ -1,4 +1,4 @@
-source activate $ENV
+#!/bin/bash
 
 echo "running Data Load" 
 python src/db/db_conn.py

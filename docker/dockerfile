@@ -1,0 +1,14 @@
+FROM python:3.9-slim
+
+# Set working directory
+WORKDIR /app
+
+# Get source code and checkout master branch
+RUN git clone https://github.com/liujj90/lyrion-fastapi.git .
+RUN git checkout master
+
+# Create environment
+RUN pip3 install requirements.txt 
+
+# run shell script
+ENTRYPOINT ["startup.sh"]
