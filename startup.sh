@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "running Data Load" 
 python src/db/db_conn.py

@@ -54,4 +54,8 @@ async def health_check():
     return {"status": "healthy"}
 
 if __name__ == "__main__":
+    from src.db.db_conn import create_db, load_db_from_csv
+    create_db()
+    load_db_from_csv()
+    print("loaded data into db")
     uvicorn.run(app, host="0.0.0.0", port=8000)
